@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Mali", cursive;
+}
+
+html {
+    height: 100%;
+  }
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    background: url(/images/wallpaperhome/wallpaper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/*header*/
+
+.header{
+    background-color: #3e3e3e;
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    padding: 30px 10%;
+    height: 100px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header ul{
+    display: flex;
+}
+
+.header ul li{
+    list-style: none;
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 15px 0 0;
+    transition: color 0.3s ease;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu li a{
+    color: white;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu li a:hover{
+    color: black;
+    transition: 0.5s
+}
+
+
+.header ul li:last-child a {
+    margin-right: 0;
+}
+
+.header ul.menu li a:hover{
+    color: black;
+    transition: 0.5s
+}
+
+.header ul.menu-sub li:hover a{
+    color: black;
+    transition: 0.5s;
+}
+
+.header img{
+    width: auto;
+    height: 65px;
+}
+
+.header img:last-child{
+    margin-right: 0;
+}
+
+.header ul.menu li:hover{
+    background-color: #3e3e3e;
+    transition: 0.5s;
+}
+
+.header ul:hover li ul.menu-sub{
+    transition: 0.3s;
+}
+    
+
+.header ul.menu li ul.menu-sub{
+    position: absolute;
+    display: none;
+    width: 230px;
+    background-color: #383838;
+}
+
+.header ul.menu li ul.menu-sub li{
+    padding: 15px 20px;
+    display: flex;
+}
+
+.header ul.menu li:hover ul.menu-sub{
+    display: block; 
+    border: 2px solid white;
+}
+
+
+.header ul.menu li:hover{
+    background-color: #3e3e3e;
+    transition: 0.5s;
+}
+
+.header ul:hover li ul.menu-sub{
+    transition: 0.3s;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu {
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 30px;
+    width: 230px;
+    display: none;
+    background-color: #383838;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu li{
+    padding: 15px 25px;
+    display: flex;
+}
+
+.header ul.menu li:hover ul.menu-sub li:hover ul.osu{
+    display: block; 
+    border: 2px solid white;
+}
+
+.menu-header{
+    display: none;
+}
+
+/*header_dropdown*/
+
+.header_dropdown{
+    display: none;
+    position: absolute;
+    justify-content: space-between;
+    right: 0;
+    top: 70px;        
+    height: 0;       
+    width: 100%;
+    background:#383838;
+    backdrop-filter: blur(15px); 
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32 , 1.275);
+}
+
+.header_dropdown li{
+    padding: 1rem;
+}
+
+.header_dropdown a{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.header_dropdown.open{
+    min-height: 300px;
+    height: auto;
+}
+
+.header_dropdown ul.osu-drop li a{
+    padding: 0 15px;
+}
+
+.header_dropdown .osu-drop {
+    display: none;
+}
+
+.header_dropdown li.osu-list{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.osu-drop{
+    margin-top: 15px;
+    background-color: #3e3e3e;
+    width: 100%;
+}
+
+.osu-drop li a{
+    text-decoration: none;
+    color: white;
+}
+
+.osu-drop.open {
+    display: block;
+}
+ 
+
+/*icon*/
+
+.toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*banner*/
+
+.container .banner img{
+    border: 5px solid white;
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+}
+
+.container .banner1{
+    display: none;
+}
+
+
+
+/*popup-image*/
+.container .popup-image{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container .popup-image span{
+    position: absolute;
+    top: 0; right: 30px;
+    font-size: 60px;
+    font-weight: bolder;    
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container .popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    width: 750px;
+    object-fit: cover;
+}
+
+.container .popup-image1{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container .popup-image1 span{
+    position: absolute;
+    top: 0; right: 30px;
+    font-size: 60px;
+    font-weight: bolder;    
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container .popup-image1 img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    width: 750px;
+    object-fit: cover;
+}
+
+/*footer*/
+
+footer{
+    padding: 15px;
+    align-items: center;
+    background-color: #3e3e3e;
+    margin-top: auto;
+}
+  
+footer p{
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:1000px) {
+
+    .menu-header{
+        display: block;
+    }
+
+    .header{
+        padding: 0 35px;
+        height: 70px;
+        justify-content: space-between;
+    }
+
+    .header img{
+        display: block;
+    }
+
+    .header .logo img{
+        display: none;
+    }
+
+    .header ul li a{
+        display: none;
+    }
+
+    .header ul.osu-drop li a{
+        display: block;
+        margin-top: 1px;
+    }
+
+    .toggle_btn{
+        display: block;
+    }
+
+    .header_dropdown{
+        display: block;
+    }
+    
+    .container .banner1{
+        display: none;
+    }
+
+    .banner img{
+        display: none;
+    }
+
+    .container .banner1{
+        display: block;
+    }
+
+    .container .banner1 img{
+        border-radius: 20px;
+        border: 5px solid white;
+        width: auto;
+        height: 500px;
+    }
+
+    .container .banner1 .popup-image img{
+        display: block;
+    }
+    
+    .banner .popup-image img{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .header img{
+        width: auto;
+        height: 45px;
+    }
+
+    .toggle_btn{
+        display: block;
+    }
+
+    .header_dropdown{
+        display: block;
+    }
+
+    .banner img{
+        display: none;
+    }
+
+    .container .banner1 img{
+        border-radius: 20px;
+        border: 5px solid white;
+        width: auto;
+        height: 350px;
+    }   
+}

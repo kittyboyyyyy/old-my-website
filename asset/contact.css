@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Mali", cursive;
+}
+
+html {
+    height: 100%;
+  }
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    background: url(/images/wallpaperhome/wallpapercontact.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/*header*/
+
+.header{
+    background-color: #3e3e3e;
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    padding: 30px 10%;
+    height: 100px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header ul{
+    display: flex;
+}
+
+.header ul li{
+    list-style: none;
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu li a{
+    color: white;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu li a:hover{
+    color: black;
+    transition: 0.5s
+}
+
+
+.header ul li:last-child a {
+    margin-right: 0;
+}
+
+.header ul.menu li a:hover{
+    color: black;
+    transition: 0.5s
+}
+
+.header ul.menu-sub li:hover a{
+    color: black;
+    transition: 0.5s;
+}
+
+.header img{
+    width: auto;
+    height: 65px;
+}
+
+.header ul.menu li:hover{
+    background-color: #3e3e3e;
+    transition: 0.5s;
+}
+
+.header ul:hover li ul.menu-sub{
+    transition: 0.3s;
+}
+    
+
+.header ul.menu li ul.menu-sub{
+    position: absolute;
+    display: none;
+    width: 230px;
+    background-color: #383838;
+}
+
+.header ul.menu li ul.menu-sub li{
+    padding: 15px 20px;
+    display: flex;
+}
+
+.header ul.menu li:hover ul.menu-sub{
+    display: block; 
+    border: 2px solid white;
+}
+
+
+.header ul.menu li:hover{
+    background-color: #3e3e3e;
+    transition: 0.5s;
+}
+
+.header ul:hover li ul.menu-sub{
+    transition: 0.3s;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu {
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 30px;
+    width: 230px;
+    display: none;
+    background-color: #383838;
+}
+
+.header ul.menu li ul.menu-sub li ul.osu li{
+    padding: 15px 25px;
+    display: flex;
+}
+
+.header ul.menu li:hover ul.menu-sub li:hover ul.osu{
+    display: block; 
+    border: 2px solid white;
+}
+
+/*header_dropdown*/
+
+.header_dropdown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background:#383838;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32 , 1.275);
+}
+
+.header_dropdown li{
+    padding: 0.7rem;
+}
+
+.header_dropdown a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.header_dropdown.open{
+    height: 250px;
+}
+
+/*icon*/
+
+.toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*-linkcontact-*/
+
+.link-contact h1{
+    color:white;
+    font-size: 60px;
+}
+
+.link-contact {
+    color: white;
+    font-size: 18px;
+}
+
+/*-----------------linkbox--------------*/
+
+.box1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 150px;
+    margin: 20px;
+}
+
+.box2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 150px;
+    margin: 20px;
+}
+
+.box3{
+    display: none;
+}
+
+.link-box{
+    background-color: #3e3e3e;
+    color: white;
+    width: auto;
+    margin: 0 auto;
+    height: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    overflow: hidden;
+    border: 5px solid white;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    text-decoration: none;
+}
+
+.link-box h1{
+    color: white;
+}
+
+.link-box a{
+    text-decoration: none;
+}
+
+.link-box img{
+    height: 280px;
+    background-color: #383838;
+}
+
+.link-box:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
+}
+
+
+/*footer*/
+
+footer{
+    padding: 15px;
+    align-items: center;
+    background-color: #383838;
+    margin-top: auto;
+}
+  
+footer p {
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/*phone screen*/
+
+@media screen and (max-width:1000px) {
+
+    .header{
+        padding: 0 35px;
+        height: 70px;
+        justify-content: space-between;
+    }
+
+    .header img{
+        display: block;
+    }
+
+    .header ul li a{
+        display: none;
+    }
+
+    .toggle_btn{
+        display: block;
+    }
+
+    .header_dropdown{
+        display: block;
+    }
+
+    .header ul li a{
+        font-size: 15.4px;
+    }
+
+    .box1{
+        flex-wrap: wrap;
+    }
+
+    .box2{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .header img{
+        width: auto;
+        height: 45px;
+    }
+
+    .toggle_btn{
+        display: block;
+    }
+
+    .header_dropdown{
+        display: block;
+    }
+
+    .link-contact h1{
+        font-size: 30px;
+    }
+    .box1{
+        display: none;
+    }
+
+    .box2{
+        display: none;
+    }
+
+    .box3{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .link-box{
+        margin-top: 20px;
+    }       
+
+    .box3 img{
+        width: auto;
+        height: 100px;
+    }
+}
